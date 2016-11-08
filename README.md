@@ -6,3 +6,10 @@ here we make game yay
 
 now den ma homies, i is ere wit ma brudda's; Miley (The Magnificent) De Silva, Derick (Walter Melon) Abo(*Click*)agye, Ronon (Soulless) Carwood, Dezzy (Freshman from Bel Air) Alexander, Kishin (Kitchen, Christen, Quiche) Ambasana and Team leader George (Gay Orgy) Ball.
 
+            _   _
+           (.)_(.)
+        _ (   _   ) _
+       / \/`-----'\/ \
+     __\ ( (     ) ) /__
+     )   /\ \._./ /\   (
+      )_/ /|\   /|\ \_(
