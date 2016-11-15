@@ -1,5 +1,5 @@
-# D1---Steve-Squad
+# Procedural generation function
 
-here we make game yay
+Can be used to add obstacles, powerups etc. randomly on screen.
 
-"it's ya boy steve" -Steve(oct 2016 - nov 2016)
+code is an example of how the function should be implented.
