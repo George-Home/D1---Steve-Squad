@@ -17,7 +17,7 @@ def procGen(surface, width, height):
         y = random.randint(0, surfaceH)
     rectangles[len(rectangles)] = (x,y,width,height)
 
-
+#Start of contributions by Dezzy
 pygame.init()
 done=0
 
@@ -29,6 +29,7 @@ while done == False:
     screen_width=1000
     screen_height=800
     screen= pygame.display.set_mode((screen_width,screen_height))
+#End of contributions by Dezzy
 
 #generate random point for obstcle to spawn
     if generated==False:
