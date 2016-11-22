@@ -70,7 +70,7 @@ def gameLoop():
         clock.tick(180)
 
 
-pygame.init()
+pygame.init() #Start of Milinda's Menu
 
 display_width = 1000
 display_height = 800
