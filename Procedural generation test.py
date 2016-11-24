@@ -6,8 +6,8 @@ import pygame.locals
 generated = False
 rectangles = {}
 def procGen(surface, width, height):
-    """Takes the drawing surface, and the rectangle color, width and
-    height. Draws the rectangle in a random location on the surface."""
+    """Takes the drawing surface, and the rectangle width and height. 
+    Returns a random location within the size of the surface."""
     surfaceW = surface.get_width() - width      #Ensures the location can't be generated
     surfaceH = surface.get_height() - height    #such that the rectangle goes off the screen
     x = random.randint(0, surfaceW)
@@ -17,7 +17,6 @@ def procGen(surface, width, height):
         y = random.randint(0, surfaceH)
     rectangles[len(rectangles)] = (x,y,width,height)
 
-#Start of contributions by Dezzy
 pygame.init()
 done=0
 
@@ -29,9 +28,8 @@ while done == False:
     screen_width=1000
     screen_height=800
     screen= pygame.display.set_mode((screen_width,screen_height))
-#End of contributions by Dezzy
 
-#generate random point for obstcle to spawn
+#generate random point for rectangle to spawn
     if generated==False:
         for i in range(5): #input of range function determines number of rectangles generated
             procGen(screen, 32, 32)
