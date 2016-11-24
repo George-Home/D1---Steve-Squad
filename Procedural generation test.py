@@ -12,7 +12,7 @@ def procGen(surface, width, height):
     surfaceH = surface.get_height() - height    #such that the rectangle goes off the screen
     x = random.randint(0, surfaceW)
     y = random.randint(0, surfaceH)
-    while (x,y) in rectangles:          #prevents two rectagnles sharing a location
+    while (x,y) in rectangles:          #prevents two rectangles sharing a location
         x = random.randint(0, surfaceW)
         y = random.randint(0, surfaceH)
     rectangles[len(rectangles)] = (x,y,width,height)
