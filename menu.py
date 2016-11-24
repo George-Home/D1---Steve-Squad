@@ -1,16 +1,16 @@
-import pygame
+import pygame        #Imports Pygame Module
 import time
 import random
 
-pygame.init()
+pygame.init()   #Intialises all Pygame Modules and functions
 
-display_width = 800
+display_width = 800   
 display_height = 600
 
-gameDisplay = pygame.display.set_mode((display_width,display_height))
+gameDisplay = pygame.display.set_mode((display_width,display_height))  #Creates display for the Menu
 
 
-pygame.display.set_caption('Tanks')
+pygame.display.set_caption('Tanks')  #Header/Title of the game
 
 #icon = pygame.image.load("tank-152362_640.png")       
 #pygame.display.set_icon(icon)
@@ -45,14 +45,14 @@ ground_height = 35
 
 
 
-smallfont = pygame.font.SysFont("bauhaus 93", 25)
+smallfont = pygame.font.SysFont("bauhaus 93", 25)  #setting the font and size of the menu
 medfont = pygame.font.SysFont("bauhaus 93", 40)
 largefont = pygame.font.SysFont("bauhaus 93", 85)
 
 #img = pygame.image.load('tank-152362_640.png')
 #appleimg = pygame.image.load('tank-152362_640.png')
 
-def text_objects(text, color,size = "small"):
+def text_objects(text, color,size = "small"):      #renders out the option to have small, meduim or large font size in the text objects
 
     if size == "small":
         textSurface = smallfont.render(text, True, color)
@@ -63,7 +63,7 @@ def text_objects(text, color,size = "small"):
 
     return textSurface, textSurface.get_rect()
 
-def text_to_button(msg, color, buttonx, buttony, buttonwidth, buttonheight, size = "small"):
+def text_to_button(msg, color, buttonx, buttony, buttonwidth, buttonheight, size = "small"): #
     textSurf, textRect = text_objects(msg,color,size)
     textRect.center = ((buttonx+(buttonwidth/2)), buttony+(buttonheight/2))
     gameDisplay.blit(textSurf, textRect)
@@ -115,14 +115,14 @@ def game_intro():
                         quit()
 
         gameDisplay.fill(black)
-        message_to_screen("Girls Gone Wild Russian Edition (Tanks)",white,-100,size="medium")
+        message_to_screen("Girls Gone Wild Russian Edition (Tanks)",white,-100,size="medium")  #Prints out the tile of the game and objectives so that the display would have text and the buttons also
         message_to_screen("The objective is to chose your perks",white,-30)
         message_to_screen("Strategy is the key",white,10)
         message_to_screen("The last one stands.",white,50)
         message_to_screen("Press C to play, P to pause or Q to quit",white,180)
 
 
-        button("play", 150,500,100,50, green, light_green, action="Play")
+        button("play", 150,500,100,50, green, light_green, action="Play")                   #The buttons of the game
         button("controls", 350,500,100,50, yellow, light_yellow, action="Controls")
         button("quit", 550,500,100,50, red, light_red, action ="Quit")
 
