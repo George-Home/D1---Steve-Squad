@@ -14,8 +14,8 @@ image_x=random.randint(0,870)
 image_y= random.randint(0,905)
 
 #Image moving speed
-image_x_change = 2
-image_y_change = 2
+image_x_change = 1
+image_y_change = 1
 
 #Colours (RGB)
 White=(255,255,255)
@@ -41,10 +41,10 @@ while done == False:
     screen.blit(image,(image_x,image_y)) #runs image on screen
 
 #Moving Image
-    if image_x > 870 or image_x < 0 :
+    if image_x > 934 or image_x < 0 :
         image_x_change*= -1             
             
-    if image_y > 905 or image_y < 0:
+    if image_y > 952 or image_y < 0:
         image_y_change*= -1
 
     image_x+=image_x_change
@@ -58,4 +58,6 @@ while done == False:
 
 
 pygame.quit()
+
+#http://listmoz.com#68Pf0K0vtmzj3tHVy 
 
