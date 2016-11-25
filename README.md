@@ -1,5 +1,4 @@
 # Procedural generation function
 
 Can be used to add obstacles, powerups etc. randomly on screen.
-
-code is an example of how the function should be implented.
+It generates a random location which can be used to generate a rectangle.
