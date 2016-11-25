@@ -21,12 +21,14 @@ block_size = 10
 FPS = 30
 
 font = pygame.font.SysFont(None, 25)
-
+#function for printing out the gameover message
 def message_to_screen(msg,color):
     screen_text = font.render(msg, True, color)
     gameDisplay.blit(screen_text, [width/2, height/2])
 
-
+#Used to be called "Start" but for teamwork purposes, it had to be changed.
+#Starts with a 'dot' in the middle of the screen and while the game is not ended (while use is not pressing "q")
+#the game runs.
 def gameLoop():
     gameExit = False
     gameOver = False
@@ -38,7 +40,7 @@ def gameLoop():
     lead_y_change = 0
 
     while not gameExit:
-
+#when game is over, it prints a message telling the user either to press C to restart the game or Q to quit 
         while gameOver == True:
             gameDisplay.fill(white)
             message_to_screen("Game over, press C to play again or Q to quit", red)
@@ -51,7 +53,8 @@ def gameLoop():
                         gameOver = False
                     if event.key == pygame.K_c:
                         gameLoop()
-
+#Did this for testing issues. Also, random movements weren't my part.
+#Movements are based on arrow key press
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -69,7 +72,7 @@ def gameLoop():
                 elif event.key == pygame.K_DOWN:
                     lead_y_change = block_size
                     lead_x_change = 0
-
+#Game is over when the tank hits the border of the gamescreen(still for testing purpose)
         if lead_x >= width or lead_x < 0 or lead_y >= height or lead_y < 0:
             gameOver = True
 
