@@ -18,13 +18,13 @@ pygame.display.set_caption('Tank Game')
 time = pygame.time.Clock()
 
 block_size = 10
-FPS = 30
+FPS = 5
 
 font = pygame.font.SysFont(None, 25)
 #function for printing out the gameover message
 def message_to_screen(msg,color):
     screen_text = font.render(msg, True, color)
-    gameDisplay.blit(screen_text, [width/2, height/2])
+    gameDisplay.blit(screen_text, [width/3, height/2])
 
 #Used to be called "Start" but for teamwork purposes, it had to be changed.
 #Starts with a 'dot' in the middle of the screen and while the game is not ended (while use is not pressing "q")
