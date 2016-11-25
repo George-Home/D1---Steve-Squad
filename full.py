@@ -359,8 +359,8 @@ def game_intro():
   
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_c:
+                        gameLoop()
                         kishan()
-                        gameLoop() 
                     elif event.key == pygame.K_q:
                         pygame.quit()
                         quit()
@@ -374,9 +374,7 @@ def game_intro():
         message_to_screen("Press Q to Quit ",red,210)
   
   
-        button("play", 150,500,100,50, green, light_green, action="Play")
-        # button("controls", 350,500,100,50, yellow, light_yellow, action="Controls")
-        button("quit", 550,500,100,50, red, light_red, action ="Quit")
+    
   
         
      
