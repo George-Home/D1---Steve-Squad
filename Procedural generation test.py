@@ -9,7 +9,7 @@ def randomGen(surface, width, height):
     """Takes the drawing surface, and the rectangle width and height.
     Returns a random location within the size of the surface."""
     surfaceW = surface.get_width() - width      #Ensures the location can't be generated
-    surfaceH = surface.get_height() - height    #such that the rectangle goes off the screen
+    surfaceH = surface.get_height() - height    #such that the rectangle goes off the screen.
     x = random.randint(0, surfaceW)
     y = random.randint(0, surfaceH)
     while (x,y) in rectangles:          #prevents two rectangles sharing a location
