@@ -18,7 +18,7 @@ pygame.display.set_caption('Tank Game')
 time = pygame.time.Clock()
 
 block_size = 10
-FPS = 5
+FPS = 30
 
 font = pygame.font.SysFont(None, 25)
 #function for printing out the gameover message
