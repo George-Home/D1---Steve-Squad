@@ -15,7 +15,7 @@ pygame.display.set_caption('Tanks')  #Header/Title of the game
 #icon = pygame.image.load("tank-152362_640.png")       
 #pygame.display.set_icon(icon)
 
-white = (255,255,255)
+white = (255,255,255)                                   #RGB colour presets
 black = (0,0,0)
 
 
@@ -63,12 +63,12 @@ def text_objects(text, color,size = "small"):      #renders out the option to ha
 
     return textSurface, textSurface.get_rect()
 
-def text_to_button(msg, color, buttonx, buttony, buttonwidth, buttonheight, size = "small"): #
-    textSurf, textRect = text_objects(msg,color,size)
+def text_to_button(msg, color, buttonx, buttony, buttonwidth, buttonheight, size = "small"): #Function to make the button 
+    textSurf, textRect = text_objects(msg,color,size)                                        #shape, colour, size and text
     textRect.center = ((buttonx+(buttonwidth/2)), buttony+(buttonheight/2))
     gameDisplay.blit(textSurf, textRect)
    
-def message_to_screen(msg,color, y_displace = 0, size = "small"):
+def message_to_screen(msg,color, y_displace = 0, size = "small"):                            #
     textSurf, textRect = text_objects(msg,color,size)
     textRect.center = (int(display_width / 2), int(display_height / 2)+y_displace)
     gameDisplay.blit(textSurf, textRect)
@@ -115,22 +115,22 @@ def game_intro():
                         quit()
 
         gameDisplay.fill(black)
-        message_to_screen("Girls Gone Wild Russian Edition (Tanks)",white,-100,size="medium")  #Prints out the tile of the game and objectives so that the display would have text and the buttons also
-        message_to_screen("The objective is to chose your perks",white,-30)
-        message_to_screen("Strategy is the key",white,10)
+        message_to_screen("Girls Gone Wild Russian Edition (Tanks)",white,-100,size="medium")  #Prints out the tile of the game     
+        message_to_screen("The objective is to chose your perks",white,-30)                    #and objectives so that the display 
+        message_to_screen("Strategy is the key",white,10)                                      #would have text and the buttons also
         message_to_screen("The last one stands.",white,50)
-        message_to_screen("Press C to play, P to pause or Q to quit",white,180)
+        message_to_screen("Press C to play, P to pause or Q to quit",white,180)             
 
 
         button("play", 150,500,100,50, green, light_green, action="Play")                   #The buttons of the game
-        button("controls", 350,500,100,50, yellow, light_yellow, action="Controls")
-        button("quit", 550,500,100,50, red, light_red, action ="Quit")
-
+        button("controls", 350,500,100,50, yellow, light_yellow, action="Controls")         #that shows up on the window screen
+        button("quit", 550,500,100,50, red, light_red, action ="Quit")                      #i.e Play, Control and Quit
+                                                                                            #Mouse Hover function should also work too
 
 
         pygame.display.update()
 
-        clock.tick(15)
+        clock.tick(15)                                                                      # FPS=Refreshes every 15mm/s
 
 
 
@@ -142,11 +142,11 @@ def game_intro():
 
 
 
-    pygame.quit()
+    pygame.quit()                                                                       #Quits game, when you press Q
     quit()
 
 game_intro()
-gameLoop()
+gameLoop()                                                                              #Gameloops over the code when you press play
 
 
 
